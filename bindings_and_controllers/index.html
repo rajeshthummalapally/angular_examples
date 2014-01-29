@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learning Angular - Step by Step</title>
+    <script type="text/javascript" src="../scripts/main.js"></script>
+  </head>
+  <body>
+    <div ng-app="">
+      <input type="text" ng-model="data.message" />
+      <h1>{{data.message}}</h1>
+      <div ng-controller="firstCtrl">
+        <input type="text" ng-model="data.message" />
+        <h1>{{data.message}}</h1>
+      </div>
+      <div ng-controller="secondCtrl">
+        <input type="text" ng-model="data.message" />
+        <h1>{{data.message}}</h1>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+</html>
