@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learning Angular - Step by Step</title>
+  </head>
+  <body>
+    <div ng-app="angularApp">
+      <div ng-controller="firstCtrl">
+        <input type="text" ng-model="data.message" />
+        <h1>{{data.message}}</h1>
+      </div>
+      <div ng-controller="secondCtrl">
+        <input type="text" ng-model="data.message" />
+        <h1>{{data.message}}</h1>
+      </div>
+      <input type="text" ng-model="data.label_color" />
+      <label style="color: {{data.label_color}}">Am I changing automatically</label>
+    </div>
+    <p>
+      In this excercise, we are defining an app, and then creating a service('Data') that returns an object.
+      We updated the controllers to inject the data from service. 
+    </p>
+    <p>
+       When the page loads, both the h1s use the data from the service, but they are still bindable to the data from their own models
+    </p>
+  </body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+</html>

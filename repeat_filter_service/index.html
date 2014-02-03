@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learning Angular - Step by Step</title>
+  </head>
+  <body>
+    <div ng-app="myApp">
+      <div ng-controller="statesCtrl">
+        <p>Adding "search.name" as ng-model we are filtering by state names alone</p>
+        <input type="text" ng-model="search.name">
+        <table>
+          <tr ng-repeat="state in states | filter: search">
+            <td>{{state.name}}</td>
+            <td>{{state.capital}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+</html>
